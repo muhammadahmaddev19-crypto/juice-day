@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JUICE — Fresh & Natural</title>
     <style>
-       :root {
+      :root {
     --green: #0b5d2a;
     --dark-green: #07351a;
     --text: #172019;
@@ -1202,6 +1202,40 @@ footer a:not(.footer-logo) {
 
 /* RESPONSIVE */
 
+/* =========================================================
+   DESKTOP BOTTLE MOTION
+   Keeps the original desktop size, positions and rotations.
+   Only the vertical position moves, so the design stays intact.
+   ========================================================= */
+
+.hero-products img:nth-child(1) {
+    animation: desktopGreenFloat 4.5s ease-in-out infinite;
+}
+
+.hero-products img:nth-child(2) {
+    animation: desktopOrangeFloat 5s ease-in-out infinite;
+}
+
+.hero-products img:nth-child(3) {
+    animation: desktopBerryFloat 4.7s ease-in-out infinite;
+}
+
+@keyframes desktopGreenFloat {
+    0%, 100% { top: 80px; }
+    50% { top: 62px; }
+}
+
+@keyframes desktopOrangeFloat {
+    0%, 100% { top: 25px; }
+    50% { top: 7px; }
+}
+
+@keyframes desktopBerryFloat {
+    0%, 100% { top: 80px; }
+    50% { top: 61px; }
+}
+
+
 @media (max-width: 900px) {
 
     .header nav {
@@ -1217,23 +1251,23 @@ footer a:not(.footer-logo) {
         grid-template-columns: 1fr;
     }
 
-    /* Tablet / smaller laptop hero bottles.
-       The bottles become a 3-column layout instead of
-       competing for the same absolute-positioned space. */
+    /* Tablet hero bottles: larger and close together */
     .hero-products {
-        height: 360px;
+        height: 390px;
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(3, 1fr);
         align-items: start;
-        gap: 8px;
+        gap: 0;
         position: relative;
+        overflow: visible;
     }
 
     .hero-products img {
         position: relative;
-        width: min(120px, 100%);
-        max-width: 120px;
+        width: 135px;
+        max-width: 100%;
+        height: auto;
         left: auto !important;
         right: auto !important;
         top: auto !important;
@@ -1242,18 +1276,36 @@ footer a:not(.footer-logo) {
 
     .hero-products img:nth-child(1) {
         transform: rotate(-7deg);
-        margin-top: 70px;
+        margin-top: 72px;
+        animation: tabletGreenFloat 4.5s ease-in-out infinite;
     }
 
     .hero-products img:nth-child(2) {
-        transform: none;
-        margin-top: 15px;
+        transform: translateX(0);
+        margin-top: 10px;
         z-index: 2;
+        animation: tabletOrangeFloat 5s ease-in-out infinite;
     }
 
     .hero-products img:nth-child(3) {
         transform: rotate(7deg);
-        margin-top: 70px;
+        margin-top: 72px;
+        animation: tabletBerryFloat 4.7s ease-in-out infinite;
+    }
+
+    @keyframes tabletGreenFloat {
+        0%, 100% { margin-top: 72px; }
+        50% { margin-top: 54px; }
+    }
+
+    @keyframes tabletOrangeFloat {
+        0%, 100% { margin-top: 10px; }
+        50% { margin-top: -8px; }
+    }
+
+    @keyframes tabletBerryFloat {
+        0%, 100% { margin-top: 72px; }
+        50% { margin-top: 53px; }
     }
 
     .product-grid {
@@ -1308,25 +1360,25 @@ footer a:not(.footer-logo) {
 
     /* =====================================================
        MOBILE HERO BOTTLES
-       IMPORTANT: use 3 columns, NOT absolute positioning.
-       This guarantees the bottles cannot overlap.
+       Larger, closer and separated into 3 equal columns.
+       No absolute left/right positioning on mobile.
        ===================================================== */
 
     .hero-products {
-        height: 330px;
+        height: 360px;
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(3, 1fr);
         align-items: start;
-        gap: 4px;
+        gap: 0;
         position: relative;
         overflow: visible;
     }
 
     .hero-products img {
         position: relative;
-        width: min(100px, 100%);
-        max-width: 100px;
+        width: 130px;
+        max-width: 100%;
         height: auto;
         left: auto !important;
         right: auto !important;
@@ -1334,23 +1386,41 @@ footer a:not(.footer-logo) {
         justify-self: center;
     }
 
-    /* Green */
+    /* Green bottle */
     .hero-products img:nth-child(1) {
         transform: rotate(-7deg);
-        margin-top: 80px;
+        margin-top: 70px;
+        animation: mobileGreenFloat 4.5s ease-in-out infinite;
     }
 
-    /* Orange */
+    /* Orange bottle */
     .hero-products img:nth-child(2) {
         transform: none;
-        margin-top: 20px;
+        margin-top: 8px;
         z-index: 2;
+        animation: mobileOrangeFloat 5s ease-in-out infinite;
     }
 
-    /* Berry */
+    /* Berry bottle */
     .hero-products img:nth-child(3) {
         transform: rotate(7deg);
-        margin-top: 80px;
+        margin-top: 70px;
+        animation: mobileBerryFloat 4.7s ease-in-out infinite;
+    }
+
+    @keyframes mobileGreenFloat {
+        0%, 100% { margin-top: 70px; }
+        50% { margin-top: 52px; }
+    }
+
+    @keyframes mobileOrangeFloat {
+        0%, 100% { margin-top: 8px; }
+        50% { margin-top: -10px; }
+    }
+
+    @keyframes mobileBerryFloat {
+        0%, 100% { margin-top: 70px; }
+        50% { margin-top: 51px; }
     }
 
     .page-hero h1 {
@@ -1385,8 +1455,8 @@ footer a:not(.footer-logo) {
 @media (max-width: 380px) {
 
     .hero {
-        padding-left: 6%;
-        padding-right: 6%;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
     .hero h1 {
@@ -1394,26 +1464,44 @@ footer a:not(.footer-logo) {
     }
 
     .hero-products {
-        height: 300px;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 2px;
+        height: 320px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
     }
 
     .hero-products img {
-        width: min(82px, 100%);
-        max-width: 82px;
+        width: 108px;
+        max-width: 100%;
     }
 
     .hero-products img:nth-child(1) {
-        margin-top: 78px;
+        margin-top: 68px;
+        animation: smallGreenFloat 4.5s ease-in-out infinite;
     }
 
     .hero-products img:nth-child(2) {
-        margin-top: 18px;
+        margin-top: 8px;
+        animation: smallOrangeFloat 5s ease-in-out infinite;
     }
 
     .hero-products img:nth-child(3) {
-        margin-top: 78px;
+        margin-top: 68px;
+        animation: smallBerryFloat 4.7s ease-in-out infinite;
+    }
+
+    @keyframes smallGreenFloat {
+        0%, 100% { margin-top: 68px; }
+        50% { margin-top: 52px; }
+    }
+
+    @keyframes smallOrangeFloat {
+        0%, 100% { margin-top: 8px; }
+        50% { margin-top: -8px; }
+    }
+
+    @keyframes smallBerryFloat {
+        0%, 100% { margin-top: 68px; }
+        50% { margin-top: 51px; }
     }
 
 }
