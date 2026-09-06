@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JUICE — Fresh & Natural</title>
     <style>
-      :root {
+      /* =========================================================
+   JUICE WEBSITE - COMPLETE RESPONSIVE CSS
+   Desktop preserved + larger, closer mobile bottles
+   Gentle bottle animation included
+   ========================================================= */
+
+:root {
     --green: #0b5d2a;
     --dark-green: #07351a;
     --text: #172019;
@@ -18,15 +24,17 @@
 }
 
 
+/* =========================
+   GLOBAL
+   ========================= */
+
 * {
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
-
 
 body {
     margin: 0;
@@ -35,12 +43,10 @@ body {
     font-family: Arial, sans-serif;
 }
 
-
 a {
     color: inherit;
     text-decoration: none;
 }
-
 
 button,
 input,
@@ -49,6 +55,10 @@ textarea {
     font: inherit;
 }
 
+
+/* =========================
+   TOP BAR
+   ========================= */
 
 .topbar {
     height: 32px;
@@ -60,6 +70,10 @@ textarea {
     letter-spacing: 1.7px;
 }
 
+
+/* =========================
+   HEADER
+   ========================= */
 
 .header {
     height: 82px;
@@ -74,14 +88,12 @@ textarea {
     z-index: 50;
 }
 
-
 .logo,
 .footer-logo {
     color: var(--green);
     font: bold 30px Georgia, serif;
     line-height: .8;
 }
-
 
 .logo span,
 .footer-logo span {
@@ -91,12 +103,10 @@ textarea {
     letter-spacing: 3px;
 }
 
-
 .header nav {
     display: flex;
     gap: 28px;
 }
-
 
 .header nav a {
     font-size: 11px;
@@ -104,19 +114,16 @@ textarea {
     letter-spacing: .7px;
 }
 
-
 .header nav a:hover,
 .header nav a.active {
     color: var(--green);
 }
-
 
 .actions {
     display: flex;
     align-items: center;
     gap: 15px;
 }
-
 
 .actions button {
     border: 0;
@@ -125,12 +132,10 @@ textarea {
     cursor: pointer;
 }
 
-
 .cart-icon {
     position: relative;
     font-size: 20px;
 }
-
 
 .badge {
     position: absolute;
@@ -147,7 +152,9 @@ textarea {
 }
 
 
-/* HERO */
+/* =========================
+   HERO
+   ========================= */
 
 .hero {
     min-height: 580px;
@@ -159,7 +166,6 @@ textarea {
     overflow: hidden;
 }
 
-
 .eyebrow {
     color: var(--green);
     font-size: 10px;
@@ -167,19 +173,16 @@ textarea {
     letter-spacing: 2px;
 }
 
-
 .hero h1 {
     margin: 18px 0;
     font: bold clamp(50px, 6vw, 82px)/.95 Georgia, serif;
 }
-
 
 .hero p {
     max-width: 480px;
     color: var(--muted);
     line-height: 1.7;
 }
-
 
 .btn {
     display: inline-flex;
@@ -196,12 +199,10 @@ textarea {
     cursor: pointer;
 }
 
-
 .btn.outline {
     background: white;
     color: var(--green);
 }
-
 
 .btn.center {
     display: flex;
@@ -210,11 +211,15 @@ textarea {
 }
 
 
+/* =========================
+   HERO BOTTLES - DESKTOP
+   DO NOT CHANGE
+   ========================= */
+
 .hero-products {
     height: 450px;
     position: relative;
 }
-
 
 .hero-products img {
     position: absolute;
@@ -222,13 +227,11 @@ textarea {
     filter: drop-shadow(0 25px 20px #0003);
 }
 
-
 .hero-products img:nth-child(1) {
     left: 4%;
     top: 80px;
     transform: rotate(-7deg);
 }
-
 
 .hero-products img:nth-child(2) {
     left: 50%;
@@ -237,7 +240,6 @@ textarea {
     z-index: 2;
 }
 
-
 .hero-products img:nth-child(3) {
     right: 4%;
     top: 80px;
@@ -245,7 +247,9 @@ textarea {
 }
 
 
-/* TRUST */
+/* =========================
+   TRUST
+   ========================= */
 
 .trust {
     display: grid;
@@ -253,30 +257,25 @@ textarea {
     border-bottom: 1px solid var(--line);
 }
 
-
 .trust div {
     padding: 28px;
     text-align: center;
     border-right: 1px solid var(--line);
 }
 
-
 .trust div:last-child {
     border: 0;
 }
-
 
 .trust strong,
 .trust small {
     display: block;
 }
 
-
 .trust strong {
     margin-top: 8px;
     font-size: 12px;
 }
-
 
 .trust small {
     margin-top: 5px;
@@ -285,24 +284,23 @@ textarea {
 }
 
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+   ========================= */
 
 .section {
     padding: 75px 6.5%;
 }
-
 
 .section-heading {
     margin-bottom: 40px;
     text-align: center;
 }
 
-
 .section-heading h2 {
     margin: 10px 0;
     font: bold 42px Georgia, serif;
 }
-
 
 .section-heading p {
     max-width: 600px;
@@ -312,14 +310,15 @@ textarea {
 }
 
 
-/* PRODUCTS */
+/* =========================
+   PRODUCTS
+   ========================= */
 
 .product-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 22px;
 }
-
 
 .product-image {
     display: block;
@@ -328,18 +327,15 @@ textarea {
     background: #f2f3ee;
 }
 
-
 .product-image img {
     display: block;
     width: 100%;
     transition: .35s;
 }
 
-
 .product-image:hover img {
     transform: scale(1.04);
 }
-
 
 .heart {
     position: absolute;
@@ -353,11 +349,9 @@ textarea {
     cursor: pointer;
 }
 
-
 .product-info {
     padding: 13px 2px;
 }
-
 
 .product-category {
     color: var(--green);
@@ -366,18 +360,15 @@ textarea {
     letter-spacing: 1.5px;
 }
 
-
 .product-info h3 {
     margin: 6px 0;
     font: bold 20px Georgia, serif;
 }
 
-
 .product-info p {
     color: var(--muted);
     font-size: 11px;
 }
-
 
 .rating {
     margin: 7px 0;
@@ -385,16 +376,13 @@ textarea {
     font-size: 11px;
 }
 
-
 .rating span {
     color: #777;
 }
 
-
 .price {
     font-weight: bold;
 }
-
 
 .add {
     width: 100%;
@@ -408,14 +396,15 @@ textarea {
     cursor: pointer;
 }
 
-
 .add:hover {
     background: var(--green);
     color: white;
 }
 
 
-/* SPLIT */
+/* =========================
+   SPLIT SECTION
+   ========================= */
 
 .split-section {
     padding: 75px 8%;
@@ -426,11 +415,9 @@ textarea {
     align-items: center;
 }
 
-
 .split-section h2 {
     font: bold 44px Georgia, serif;
 }
-
 
 .split-section p {
     max-width: 520px;
@@ -438,13 +425,11 @@ textarea {
     line-height: 1.8;
 }
 
-
 .image-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
 }
-
 
 .image-grid img,
 .large-image {
@@ -452,7 +437,9 @@ textarea {
 }
 
 
-/* FEATURES */
+/* =========================
+   FEATURES
+   ========================= */
 
 .features {
     display: grid;
@@ -460,23 +447,19 @@ textarea {
     gap: 18px;
 }
 
-
 .feature {
     padding: 30px;
     border: 1px solid var(--line);
     text-align: center;
 }
 
-
 .feature div {
     font-size: 30px;
 }
 
-
 .feature h3 {
     font: bold 18px Georgia, serif;
 }
-
 
 .feature p {
     color: var(--muted);
@@ -485,12 +468,13 @@ textarea {
 }
 
 
-/* REVIEWS */
+/* =========================
+   REVIEWS
+   ========================= */
 
 .reviews {
     background: var(--cream);
 }
-
 
 .review-grid {
     display: grid;
@@ -498,24 +482,23 @@ textarea {
     gap: 20px;
 }
 
-
 .review {
     padding: 28px;
     background: white;
 }
 
-
 .stars {
     color: #e99a19;
 }
-
 
 .review p {
     font: italic 15px/1.7 Georgia, serif;
 }
 
 
-/* NEWSLETTER */
+/* =========================
+   NEWSLETTER
+   ========================= */
 
 .newsletter {
     padding: 70px 20px;
@@ -524,16 +507,13 @@ textarea {
     text-align: center;
 }
 
-
 .newsletter .eyebrow {
     color: #cfe4c7;
 }
 
-
 .newsletter h2 {
     font: bold 40px Georgia, serif;
 }
-
 
 .newsletter form {
     max-width: 470px;
@@ -541,13 +521,11 @@ textarea {
     display: flex;
 }
 
-
 .newsletter input {
     flex: 1;
     padding: 15px;
     border: 0;
 }
-
 
 .newsletter button {
     width: 60px;
@@ -557,7 +535,9 @@ textarea {
 }
 
 
-/* FOOTER */
+/* =========================
+   FOOTER
+   ========================= */
 
 footer {
     display: grid;
@@ -568,11 +548,9 @@ footer {
     color: white;
 }
 
-
 .footer-logo {
     color: white;
 }
-
 
 footer p {
     max-width: 270px;
@@ -581,12 +559,10 @@ footer p {
     line-height: 1.7;
 }
 
-
 footer h4 {
     font-size: 11px;
     letter-spacing: 1.5px;
 }
-
 
 footer a:not(.footer-logo) {
     display: block;
@@ -594,7 +570,6 @@ footer a:not(.footer-logo) {
     color: #c8d4cb;
     font-size: 11px;
 }
-
 
 .copyright {
     padding: 18px 6.5%;
@@ -605,7 +580,9 @@ footer a:not(.footer-logo) {
 }
 
 
-/* PAGE HERO */
+/* =========================
+   PAGE HERO
+   ========================= */
 
 .page-hero {
     padding: 85px 20px;
@@ -613,12 +590,10 @@ footer a:not(.footer-logo) {
     text-align: center;
 }
 
-
 .page-hero h1 {
     margin: 12px;
     font: bold 58px Georgia, serif;
 }
-
 
 .page-hero p {
     max-width: 600px;
@@ -628,7 +603,9 @@ footer a:not(.footer-logo) {
 }
 
 
-/* SHOP */
+/* =========================
+   SHOP
+   ========================= */
 
 .shop-toolbar {
     display: flex;
@@ -637,13 +614,11 @@ footer a:not(.footer-logo) {
     margin-bottom: 30px;
 }
 
-
 .filters {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
 }
-
 
 .filters button,
 .filters select {
@@ -654,14 +629,15 @@ footer a:not(.footer-logo) {
     cursor: pointer;
 }
 
-
 .filters button.active {
     border-color: var(--green);
     color: var(--green);
 }
 
 
-/* PRODUCT DETAIL */
+/* =========================
+   PRODUCT DETAIL
+   ========================= */
 
 .product-detail {
     max-width: 1150px;
@@ -672,27 +648,22 @@ footer a:not(.footer-logo) {
     gap: 70px;
 }
 
-
 .product-detail-image {
     background: #f1f2ed;
 }
 
-
 .product-detail-image img {
     width: 100%;
 }
-
 
 .product-detail-content h1 {
     margin: 10px 0;
     font: bold 55px Georgia, serif;
 }
 
-
 .rating.large {
     font-size: 14px;
 }
-
 
 .detail-price {
     margin: 15px 0;
@@ -700,19 +671,16 @@ footer a:not(.footer-logo) {
     font-weight: bold;
 }
 
-
 .detail-description {
     color: var(--muted);
     line-height: 1.8;
 }
-
 
 .ingredients {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
 }
-
 
 .chip {
     padding: 9px 12px;
@@ -721,24 +689,20 @@ footer a:not(.footer-logo) {
     font-size: 10px;
 }
 
-
 .info-box {
     margin-top: 25px;
     padding-top: 20px;
     border-top: 1px solid var(--line);
 }
 
-
 .info-box p {
     color: var(--muted);
 }
-
 
 .benefit {
     margin: 9px 0;
     font-size: 12px;
 }
-
 
 .quantity {
     display: flex;
@@ -747,7 +711,6 @@ footer a:not(.footer-logo) {
     border: 1px solid var(--line);
 }
 
-
 .quantity button {
     padding: 10px 15px;
     border: 0;
@@ -755,19 +718,16 @@ footer a:not(.footer-logo) {
     cursor: pointer;
 }
 
-
 .quantity span {
     min-width: 40px;
     padding: 10px;
     text-align: center;
 }
 
-
 .detail-buttons {
     display: flex;
     gap: 10px;
 }
-
 
 .detail-buttons .btn {
     flex: 1;
@@ -775,14 +735,15 @@ footer a:not(.footer-logo) {
 }
 
 
-/* REVIEWS */
+/* =========================
+   PRODUCT REVIEWS
+   ========================= */
 
 .product-reviews {
     max-width: 1150px;
     margin: 0 auto 70px;
     padding: 0 25px;
 }
-
 
 .review-summary {
     display: flex;
@@ -792,11 +753,9 @@ footer a:not(.footer-logo) {
     padding-bottom: 25px;
 }
 
-
 .review-summary strong {
     font: bold 50px Georgia, serif;
 }
-
 
 .review-list {
     display: grid;
@@ -805,12 +764,10 @@ footer a:not(.footer-logo) {
     margin-top: 25px;
 }
 
-
 .review-card {
     padding: 22px;
     border: 1px solid var(--line);
 }
-
 
 .review-card p {
     color: var(--muted);
@@ -819,7 +776,9 @@ footer a:not(.footer-logo) {
 }
 
 
-/* CART */
+/* =========================
+   CART
+   ========================= */
 
 .cart-page,
 .checkout {
@@ -828,14 +787,12 @@ footer a:not(.footer-logo) {
     padding: 0 25px;
 }
 
-
 .cart-layout,
 .checkout-layout {
     display: grid;
     grid-template-columns: 1.6fr .8fr;
     gap: 35px;
 }
-
 
 .cart-row {
     display: grid;
@@ -846,30 +803,25 @@ footer a:not(.footer-logo) {
     border-bottom: 1px solid var(--line);
 }
 
-
 .cart-row img {
     width: 100%;
 }
-
 
 .cart-row h3 {
     margin: 0 0 6px;
     font: bold 18px Georgia, serif;
 }
 
-
 .cart-row p {
     color: var(--muted);
     font-size: 11px;
 }
-
 
 .cart-quantity {
     display: flex;
     width: max-content;
     border: 1px solid var(--line);
 }
-
 
 .cart-quantity button {
     border: 0;
@@ -878,11 +830,9 @@ footer a:not(.footer-logo) {
     cursor: pointer;
 }
 
-
 .cart-quantity span {
     padding: 6px 12px;
 }
-
 
 .remove {
     border: 0;
@@ -891,18 +841,15 @@ footer a:not(.footer-logo) {
     font-size: 20px;
 }
 
-
 .summary {
     height: max-content;
     padding: 25px;
     background: var(--cream);
 }
 
-
 .summary h2 {
     font: bold 25px Georgia, serif;
 }
-
 
 .summary > div {
     display: flex;
@@ -911,19 +858,16 @@ footer a:not(.footer-logo) {
     font-size: 12px;
 }
 
-
 .summary-total {
     padding-top: 15px;
     border-top: 1px solid var(--line);
     font-size: 18px !important;
 }
 
-
 .summary .btn {
     width: 100%;
     text-align: center;
 }
-
 
 .empty-cart {
     padding: 60px;
@@ -931,7 +875,9 @@ footer a:not(.footer-logo) {
 }
 
 
-/* CHECKOUT */
+/* =========================
+   CHECKOUT
+   ========================= */
 
 .checkout-steps {
     display: flex;
@@ -942,24 +888,20 @@ footer a:not(.footer-logo) {
     font-size: 10px;
 }
 
-
 .checkout-steps .active {
     color: var(--green);
     font-weight: bold;
 }
-
 
 .form-box {
     padding: 28px;
     border: 1px solid var(--line);
 }
 
-
 .form-box h2 {
     margin-top: 0;
     font: bold 25px Georgia, serif;
 }
-
 
 .form-grid {
     display: grid;
@@ -967,16 +909,13 @@ footer a:not(.footer-logo) {
     gap: 15px;
 }
 
-
 .field {
     margin-bottom: 15px;
 }
 
-
 .field.full {
     grid-column: 1 / -1;
 }
-
 
 .field label {
     display: block;
@@ -985,7 +924,6 @@ footer a:not(.footer-logo) {
     font-weight: bold;
     letter-spacing: 1px;
 }
-
 
 .field input,
 .field select,
@@ -996,13 +934,14 @@ footer a:not(.footer-logo) {
     outline: none;
 }
 
-
 .form-box > .btn {
     width: 100%;
 }
 
 
-/* COLLECTIONS */
+/* =========================
+   COLLECTIONS
+   ========================= */
 
 .collection-grid {
     display: grid;
@@ -1010,19 +949,16 @@ footer a:not(.footer-logo) {
     gap: 20px;
 }
 
-
 .collection-card {
     position: relative;
     overflow: hidden;
     background: var(--soft);
 }
 
-
 .collection-card img {
     width: 100%;
     display: block;
 }
-
 
 .collection-card div {
     position: absolute;
@@ -1030,12 +966,10 @@ footer a:not(.footer-logo) {
     left: 25px;
 }
 
-
 .collection-card h2 {
     color: white;
     font: bold 35px Georgia, serif;
 }
-
 
 .collection-card span {
     color: white;
@@ -1044,7 +978,9 @@ footer a:not(.footer-logo) {
 }
 
 
-/* BLOG */
+/* =========================
+   BLOG
+   ========================= */
 
 .blog-grid {
     display: grid;
@@ -1052,22 +988,18 @@ footer a:not(.footer-logo) {
     gap: 25px;
 }
 
-
 .blog-card {
     border: 1px solid var(--line);
 }
-
 
 .blog-card img {
     width: 100%;
 }
 
-
 .blog-card > *:not(img) {
     margin-left: 20px;
     margin-right: 20px;
 }
-
 
 .blog-card > span {
     display: block;
@@ -1078,18 +1010,15 @@ footer a:not(.footer-logo) {
     letter-spacing: 1px;
 }
 
-
 .blog-card h2 {
     font: bold 24px Georgia, serif;
 }
-
 
 .blog-card p {
     color: var(--muted);
     font-size: 12px;
     line-height: 1.7;
 }
-
 
 .blog-card a {
     display: block;
@@ -1100,7 +1029,9 @@ footer a:not(.footer-logo) {
 }
 
 
-/* CONTACT */
+/* =========================
+   CONTACT
+   ========================= */
 
 .contact-layout {
     display: grid;
@@ -1108,11 +1039,9 @@ footer a:not(.footer-logo) {
     gap: 70px;
 }
 
-
 .contact-layout h2 {
     font: bold 40px Georgia, serif;
 }
-
 
 .contact-layout p {
     color: var(--muted);
@@ -1120,7 +1049,9 @@ footer a:not(.footer-logo) {
 }
 
 
-/* SEARCH */
+/* =========================
+   SEARCH
+   ========================= */
 
 .search-box {
     display: none;
@@ -1134,18 +1065,15 @@ footer a:not(.footer-logo) {
     box-shadow: 0 20px 50px #0002;
 }
 
-
 .search-box.show {
     display: block;
 }
-
 
 .search-box input {
     width: 100%;
     padding: 12px;
     border: 1px solid var(--line);
 }
-
 
 #searchResults a {
     display: flex;
@@ -1156,7 +1084,9 @@ footer a:not(.footer-logo) {
 }
 
 
-/* TOAST */
+/* =========================
+   TOAST
+   ========================= */
 
 #toast {
     position: fixed;
@@ -1174,69 +1104,36 @@ footer a:not(.footer-logo) {
     transition: .3s;
 }
 
-
 #toast.show {
     opacity: 1;
     transform: translateY(0);
 }
 
 
-/* SUCCESS */
+/* =========================
+   SUCCESS
+   ========================= */
 
 .success {
     padding: 50px 20px;
     text-align: center;
 }
 
-
 .success-icon {
     font-size: 50px;
     color: var(--green);
 }
-
 
 .success h1 {
     font: bold 45px Georgia, serif;
 }
 
 
-/* RESPONSIVE */
-
 /* =========================================================
-   DESKTOP BOTTLE MOTION
-   Keeps the original desktop size, positions and rotations.
-   Only the vertical position moves, so the design stays intact.
+   TABLET / LAPTOP RESPONSIVE
    ========================================================= */
 
-.hero-products img:nth-child(1) {
-    animation: desktopGreenFloat 4.5s ease-in-out infinite;
-}
-
-.hero-products img:nth-child(2) {
-    animation: desktopOrangeFloat 5s ease-in-out infinite;
-}
-
-.hero-products img:nth-child(3) {
-    animation: desktopBerryFloat 4.7s ease-in-out infinite;
-}
-
-@keyframes desktopGreenFloat {
-    0%, 100% { top: 80px; }
-    50% { top: 62px; }
-}
-
-@keyframes desktopOrangeFloat {
-    0%, 100% { top: 25px; }
-    50% { top: 7px; }
-}
-
-@keyframes desktopBerryFloat {
-    0%, 100% { top: 80px; }
-    50% { top: 61px; }
-}
-
-
-@media (max-width: 900px) {
+@media(max-width: 900px) {
 
     .header nav {
         display: none;
@@ -1249,63 +1146,6 @@ footer a:not(.footer-logo) {
     .checkout-layout,
     .contact-layout {
         grid-template-columns: 1fr;
-    }
-
-    /* Tablet hero bottles: larger and close together */
-    .hero-products {
-        height: 390px;
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        align-items: start;
-        gap: 0;
-        position: relative;
-        overflow: visible;
-    }
-
-    .hero-products img {
-        position: relative;
-        width: 135px;
-        max-width: 100%;
-        height: auto;
-        left: auto !important;
-        right: auto !important;
-        top: auto !important;
-        justify-self: center;
-    }
-
-    .hero-products img:nth-child(1) {
-        transform: rotate(-7deg);
-        margin-top: 72px;
-        animation: tabletGreenFloat 4.5s ease-in-out infinite;
-    }
-
-    .hero-products img:nth-child(2) {
-        transform: translateX(0);
-        margin-top: 10px;
-        z-index: 2;
-        animation: tabletOrangeFloat 5s ease-in-out infinite;
-    }
-
-    .hero-products img:nth-child(3) {
-        transform: rotate(7deg);
-        margin-top: 72px;
-        animation: tabletBerryFloat 4.7s ease-in-out infinite;
-    }
-
-    @keyframes tabletGreenFloat {
-        0%, 100% { margin-top: 72px; }
-        50% { margin-top: 54px; }
-    }
-
-    @keyframes tabletOrangeFloat {
-        0%, 100% { margin-top: 10px; }
-        50% { margin-top: -8px; }
-    }
-
-    @keyframes tabletBerryFloat {
-        0%, 100% { margin-top: 72px; }
-        50% { margin-top: 53px; }
     }
 
     .product-grid {
@@ -1326,10 +1166,44 @@ footer a:not(.footer-logo) {
         grid-template-columns: 1fr;
     }
 
+    /*
+       Tablet bottles:
+       Keep them large. They use the same visual scale as desktop.
+    */
+
+    .hero-products {
+        width: 100%;
+        height: 390px;
+        position: relative;
+    }
+
+    .hero-products img {
+        width: 250px;
+    }
+
+    .hero-products img:nth-child(1) {
+        left: -10px;
+        top: 70px;
+    }
+
+    .hero-products img:nth-child(2) {
+        left: 50%;
+        top: 15px;
+        transform: translateX(-50%);
+    }
+
+    .hero-products img:nth-child(3) {
+        right: -10px;
+        top: 70px;
+    }
 }
 
 
-@media (max-width: 550px) {
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width: 550px) {
 
     .product-grid,
     .features,
@@ -1350,78 +1224,130 @@ footer a:not(.footer-logo) {
         grid-column: auto;
     }
 
+
+    /* Header */
+
+    .header {
+        height: 82px;
+        padding: 0 7%;
+    }
+
+    .logo,
+    .footer-logo {
+        font-size: 30px;
+    }
+
+    .actions {
+        gap: 12px;
+    }
+
+
+    /* Hero text */
+
     .hero {
-        padding: 45px 7%;
+        min-height: auto;
+        padding: 45px 7% 0;
+        display: block;
     }
 
     .hero h1 {
         font-size: 50px;
     }
 
+
     /* =====================================================
-       MOBILE HERO BOTTLES
-       Larger, closer and separated into 3 equal columns.
-       No absolute left/right positioning on mobile.
+       MOBILE BOTTLES
+       IMPORTANT:
+       Do NOT make these 90px/100px.
+       The PNG has transparent space around the bottle,
+       so 260px gives the same visual bottle size as desktop.
        ===================================================== */
 
     .hero-products {
-        height: 360px;
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        align-items: start;
-        gap: 0;
+        width: calc(100% + 14vw);
+        height: 330px;
+        margin-left: -7vw;
+        margin-right: -7vw;
         position: relative;
         overflow: visible;
     }
 
     .hero-products img {
-        position: relative;
-        width: 130px;
-        max-width: 100%;
-        height: auto;
-        left: auto !important;
-        right: auto !important;
-        top: auto !important;
-        justify-self: center;
+        position: absolute;
+        width: 260px;
+        max-width: none;
+        filter: drop-shadow(0 25px 20px #0003);
     }
 
-    /* Green bottle */
+
+    /* GREEN BOTTLE */
+
     .hero-products img:nth-child(1) {
+        left: -72px;
+        top: 58px;
         transform: rotate(-7deg);
-        margin-top: 70px;
-        animation: mobileGreenFloat 4.5s ease-in-out infinite;
+        z-index: 1;
+        animation: greenBottleMobile 4s ease-in-out infinite;
     }
 
-    /* Orange bottle */
+
+    /* ORANGE BOTTLE */
+
     .hero-products img:nth-child(2) {
-        transform: none;
-        margin-top: 8px;
-        z-index: 2;
-        animation: mobileOrangeFloat 5s ease-in-out infinite;
+        left: 50%;
+        top: 5px;
+        transform: translateX(-50%);
+        z-index: 3;
+        animation: orangeBottleMobile 4.5s ease-in-out infinite;
     }
 
-    /* Berry bottle */
+
+    /* BERRY BOTTLE */
+
     .hero-products img:nth-child(3) {
+        right: -72px;
+        top: 58px;
         transform: rotate(7deg);
-        margin-top: 70px;
-        animation: mobileBerryFloat 4.7s ease-in-out infinite;
+        z-index: 1;
+        animation: berryBottleMobile 4.2s ease-in-out infinite;
     }
 
-    @keyframes mobileGreenFloat {
-        0%, 100% { margin-top: 70px; }
-        50% { margin-top: 52px; }
+
+    /* Mobile bottle motion */
+
+    @keyframes greenBottleMobile {
+        0%,
+        100% {
+            transform: translateY(0) rotate(-7deg);
+        }
+
+        50% {
+            transform: translateY(-14px) rotate(-5deg);
+        }
     }
 
-    @keyframes mobileOrangeFloat {
-        0%, 100% { margin-top: 8px; }
-        50% { margin-top: -10px; }
+    @keyframes orangeBottleMobile {
+        0%,
+        100% {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        50% {
+            transform: translateX(-50%) translateY(-16px);
+        }
     }
 
-    @keyframes mobileBerryFloat {
-        0%, 100% { margin-top: 70px; }
-        50% { margin-top: 51px; }
+    @keyframes berryBottleMobile {
+        0%,
+        100% {
+            transform: translateY(0) rotate(7deg);
+        }
+
+        50% {
+            transform: translateY(-14px) rotate(5deg);
+        }
     }
+
 
     .page-hero h1 {
         font-size: 45px;
@@ -1444,7 +1370,6 @@ footer a:not(.footer-logo) {
     .detail-buttons {
         flex-direction: column;
     }
-
 }
 
 
@@ -1452,11 +1377,11 @@ footer a:not(.footer-logo) {
    VERY SMALL PHONES
    ========================================================= */
 
-@media (max-width: 380px) {
+@media(max-width: 380px) {
 
     .hero {
-        padding-left: 5%;
-        padding-right: 5%;
+        padding-left: 6%;
+        padding-right: 6%;
     }
 
     .hero h1 {
@@ -1464,46 +1389,47 @@ footer a:not(.footer-logo) {
     }
 
     .hero-products {
-        height: 320px;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 0;
+        width: calc(100% + 12vw);
+        margin-left: -6vw;
+        margin-right: -6vw;
+        height: 315px;
     }
 
+    /*
+       Still large enough to look like the desktop bottles,
+       but slightly reduced for very narrow screens.
+    */
+
     .hero-products img {
-        width: 108px;
-        max-width: 100%;
+        width: 235px;
     }
 
     .hero-products img:nth-child(1) {
-        margin-top: 68px;
-        animation: smallGreenFloat 4.5s ease-in-out infinite;
+        left: -68px;
+        top: 58px;
     }
 
     .hero-products img:nth-child(2) {
-        margin-top: 8px;
-        animation: smallOrangeFloat 5s ease-in-out infinite;
+        left: 50%;
+        top: 8px;
     }
 
     .hero-products img:nth-child(3) {
-        margin-top: 68px;
-        animation: smallBerryFloat 4.7s ease-in-out infinite;
+        right: -68px;
+        top: 58px;
     }
+}
 
-    @keyframes smallGreenFloat {
-        0%, 100% { margin-top: 68px; }
-        50% { margin-top: 52px; }
+
+/* =========================================================
+   REDUCED MOTION ACCESSIBILITY
+   ========================================================= */
+
+@media(prefers-reduced-motion: reduce) {
+
+    .hero-products img {
+        animation: none !important;
     }
-
-    @keyframes smallOrangeFloat {
-        0%, 100% { margin-top: 8px; }
-        50% { margin-top: -8px; }
-    }
-
-    @keyframes smallBerryFloat {
-        0%, 100% { margin-top: 68px; }
-        50% { margin-top: 51px; }
-    }
-
 }
 
     </style>
