@@ -5,67 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JUICE — Fresh & Natural</title>
     <style>
-        /* ================================
-   PREMIUM JUICE BOTTLE ANIMATION
-   ================================ */
-
-.hero-products img:nth-child(1) {
-    animation: greenBottleFloat 4s ease-in-out infinite;
-}
-
-.hero-products img:nth-child(2) {
-    animation: orangeBottleFloat 4.5s ease-in-out infinite;
-}
-
-.hero-products img:nth-child(3) {
-    animation: berryBottleFloat 4.2s ease-in-out infinite;
-}
-
-
-/* GREEN BOTTLE */
-@keyframes greenBottleFloat {
-
-    0%, 100% {
-        top: 80px;
-        margin-left: 0;
-    }
-
-    50% {
-        top: 62px;
-        margin-left: 5px;
-    }
-}
-
-
-/* CENTER ORANGE BOTTLE */
-@keyframes orangeBottleFloat {
-
-    0%, 100% {
-        top: 25px;
-        margin-left: 0;
-    }
-
-    50% {
-        top: 8px;
-        margin-left: -4px;
-    }
-}
-
-
-/* RIGHT BOTTLE */
-@keyframes berryBottleFloat {
-
-    0%, 100% {
-        top: 80px;
-        margin-right: 0;
-    }
-
-    50% {
-        top: 60px;
-        margin-right: 5px;
-    }
-}
-        :root {
+       :root {
     --green: #0b5d2a;
     --dark-green: #07351a;
     --text: #172019;
@@ -1262,7 +1202,7 @@ footer a:not(.footer-logo) {
 
 /* RESPONSIVE */
 
-@media(max-width: 900px) {
+@media (max-width: 900px) {
 
     .header nav {
         display: none;
@@ -1275,6 +1215,45 @@ footer a:not(.footer-logo) {
     .checkout-layout,
     .contact-layout {
         grid-template-columns: 1fr;
+    }
+
+    /* Tablet / smaller laptop hero bottles.
+       The bottles become a 3-column layout instead of
+       competing for the same absolute-positioned space. */
+    .hero-products {
+        height: 360px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: start;
+        gap: 8px;
+        position: relative;
+    }
+
+    .hero-products img {
+        position: relative;
+        width: min(120px, 100%);
+        max-width: 120px;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        justify-self: center;
+    }
+
+    .hero-products img:nth-child(1) {
+        transform: rotate(-7deg);
+        margin-top: 70px;
+    }
+
+    .hero-products img:nth-child(2) {
+        transform: none;
+        margin-top: 15px;
+        z-index: 2;
+    }
+
+    .hero-products img:nth-child(3) {
+        transform: rotate(7deg);
+        margin-top: 70px;
     }
 
     .product-grid {
@@ -1298,7 +1277,7 @@ footer a:not(.footer-logo) {
 }
 
 
-@media(max-width: 550px) {
+@media (max-width: 550px) {
 
     .product-grid,
     .features,
@@ -1327,24 +1306,51 @@ footer a:not(.footer-logo) {
         font-size: 50px;
     }
 
+    /* =====================================================
+       MOBILE HERO BOTTLES
+       IMPORTANT: use 3 columns, NOT absolute positioning.
+       This guarantees the bottles cannot overlap.
+       ===================================================== */
+
     .hero-products {
         height: 330px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: start;
+        gap: 4px;
+        position: relative;
+        overflow: visible;
     }
 
     .hero-products img {
-        width: 145px;
+        position: relative;
+        width: min(100px, 100%);
+        max-width: 100px;
+        height: auto;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        justify-self: center;
     }
 
+    /* Green */
     .hero-products img:nth-child(1) {
-        left: 0;
+        transform: rotate(-7deg);
+        margin-top: 80px;
     }
 
+    /* Orange */
     .hero-products img:nth-child(2) {
-        left: 28%;
+        transform: none;
+        margin-top: 20px;
+        z-index: 2;
     }
 
+    /* Berry */
     .hero-products img:nth-child(3) {
-        right: 0;
+        transform: rotate(7deg);
+        margin-top: 80px;
     }
 
     .page-hero h1 {
@@ -1370,6 +1376,48 @@ footer a:not(.footer-logo) {
     }
 
 }
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .hero {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .hero-products {
+        height: 300px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 2px;
+    }
+
+    .hero-products img {
+        width: min(82px, 100%);
+        max-width: 82px;
+    }
+
+    .hero-products img:nth-child(1) {
+        margin-top: 78px;
+    }
+
+    .hero-products img:nth-child(2) {
+        margin-top: 18px;
+    }
+
+    .hero-products img:nth-child(3) {
+        margin-top: 78px;
+    }
+
+}
+
     </style>
 </head>
 
